@@ -94,7 +94,7 @@ export const WebSocketProvider = ({ children }) => {
   const connectWebSocket = useCallback(() => {
     cleanup();
 
-    ws.current = new WebSocket('ws://localhost:3000');
+    ws.current = new WebSocket('wss://schat-backend-xu2j.onrender.com');
 
     ws.current.onopen = () => {
       setIsConnected(true);
